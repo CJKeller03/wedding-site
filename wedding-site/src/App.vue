@@ -1,48 +1,12 @@
 <script setup lang="ts">
-import HelloWorld from './components/HelloWorld.vue'
+import Header from './components/Header.vue'
+import Feature from './components/Feature.vue'
 
 </script>
 
 <template>
   <div id="page-wrapper">
-    <!-- Header -->
-      <section id="header">
-        <div class="container">
-
-          <!-- Logo -->
-            <h1 id="logo"><a href="index.html">Strongly Typed</a></h1>
-            <p>A responsive HTML5 site template. Manufactured by HTML5 UP.</p>
-
-          <!-- Nav -->
-            <nav id="nav">
-              <ul>
-                <li><a class="icon solid fa-home" href="index.html"><span>Introduction</span></a></li>
-                <li>
-                  <a href="#" class="icon fa-chart-bar"><span>Dropdown</span></a>
-                  <ul>
-                    <li><a href="#">Lorem ipsum dolor</a></li>
-                    <li><a href="#">Magna phasellus</a></li>
-                    <li><a href="#">Etiam dolore nisl</a></li>
-                    <li>
-                      <a href="#">Phasellus consequat</a>
-                      <ul>
-                        <li><a href="#">Magna phasellus</a></li>
-                        <li><a href="#">Etiam dolore nisl</a></li>
-                        <li><a href="#">Phasellus consequat</a></li>
-                      </ul>
-                    </li>
-                    <li><a href="#">Veroeros feugiat</a></li>
-                  </ul>
-                </li>
-                <li><a class="icon solid fa-cog" href="left-sidebar.html"><span>Left Sidebar</span></a></li>
-                <li><a class="icon solid fa-retweet" href="right-sidebar.html"><span>Right Sidebar</span></a></li>
-                <li><a class="icon solid fa-sitemap" href="no-sidebar.html"><span>No Sidebar</span></a></li>
-              </ul>
-            </nav>
-
-        </div>
-      </section>
-
+    <Header />
     <!-- Features -->
       <section id="features">
         <div class="container">
@@ -50,47 +14,37 @@ import HelloWorld from './components/HelloWorld.vue'
             <h2>Gentlemen, behold! This is <strong>Strongly Typed</strong>!</h2>
           </header>
           <div class="row aln-center">
-            <div class="col-4 col-6-medium col-12-small">
 
-              <!-- Feature -->
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic01.jpg" alt="" /></a>
-                  <header>
-                    <h3>Okay, so what is this?</h3>
-                  </header>
-                  <p>This is <strong>Strongly Typed</strong>, a free, fully responsive site template
-                  by <a href="http://html5up.net">HTML5 UP</a>. Free for personal and commercial use under the
-                  <a href="http://html5up.net/license">CCA 3.0 license</a>.</p>
-                </section>
+            <Feature image-src="images/pic02.jpg">
+              <template v-slot:header>
+                This is a test.
+              </template>
+              <template v-slot:content>
+                The test worked!!!!!!!1
+              </template>
+            </Feature>
 
-            </div>
-            <div class="col-4 col-6-medium col-12-small">
+            <Feature image-src="images/pic02.jpg">
+              <template v-slot:header>
+                Nice! What is HTML5 UP?
+              </template>
+              <template v-slot:content>
+                <a href="http://html5up.net">HTML5 UP</a> is a side project of <a href="http://twitter.com/ajlkn">AJ’s</a> (= me).
+                I started it as a way to both test my responsive tools and sharpen up my coding
+                and design skills a bit.
+              </template>
+            </Feature>
 
-              <!-- Feature -->
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic02.jpg" alt="" /></a>
-                  <header>
-                    <h3>Nice! What is HTML5 UP?</h3>
-                  </header>
-                  <p><a href="http://html5up.net">HTML5 UP</a> is a side project of <a href="http://twitter.com/ajlkn">AJ’s</a> (= me).
-                  I started it as a way to both test my responsive tools and sharpen up my coding
-                  and design skills a bit.</p>
-                </section>
+            <Feature image-src="images/pic03.jpg">
+              <template v-slot:header>
+                What's this built with?
+              </template>
+              <template v-slot:content>
+                <strong>Responsive Tools</strong> is a simple set of tools for building responsive
+                sites and apps. All of my templates at <a href="http://html5up.net">HTML5 UP</a> are built using these tools.
+              </template>
+            </Feature>
 
-            </div>
-            <div class="col-4 col-6-medium col-12-small">
-
-              <!-- Feature -->
-                <section>
-                  <a href="#" class="image featured"><img src="images/pic03.jpg" alt="" /></a>
-                  <header>
-                    <h3>What's this built with?</h3>
-                  </header>
-                  <p><strong>Responsive Tools</strong> is a simple set of tools for building responsive
-                  sites and apps. All of my templates at <a href="http://html5up.net">HTML5 UP</a> are built using these tools.</p>
-                </section>
-
-            </div>
             <div class="col-12">
               <ul class="actions">
                 <li><a href="#" class="button icon solid fa-file">Tell Me More</a></li>
